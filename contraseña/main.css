@@ -1,0 +1,81 @@
+:root {
+    --very-light-pink: #c7c7c7;
+    --white: #fff;
+    --text-input: #F7F7F7;
+    --black: #000;
+    --violet: #a866ee;
+    --dark: #232930;
+    --hospital-green: #ACD9B2;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 110px 0 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a.img-logo img{
+    height: 30px;
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 16px;
+    margin: 0;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 8px 0 35px;
+    color: var(--very-light-pink);
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+}
+
+input#input-pass {
+    margin-bottom: 20px;
+    height: 30px;
+    border-radius: 8px;
+    padding: 5px;
+    border: 0 solid;
+    background-color: var(--text-input);
+}
+
+input#submit {
+    height: 50px;
+    border-radius: 8px;
+    border: 0 solid;
+    margin-top: 15px;
+    color: var(--white);
+    background-color: var(--hospital-green);
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
