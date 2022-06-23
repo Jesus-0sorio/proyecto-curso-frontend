@@ -1,3 +1,4 @@
+/* Declaracion de variables */
 :root {
     --very-light-pink: #c7c7c7;
     --white: #fff;
@@ -15,16 +16,7 @@ body {
     padding: 110px 0 0;
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main-nav a.img-logo img{
-    height: 30px;
-    margin-bottom: 60px;
-}
+/* Diseño de los textos */
 
 h2 {
     font-size: 16px;
@@ -38,11 +30,20 @@ h3 {
     color: var(--very-light-pink);
 }
 
-label {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 5px;
+/* Diseño del header */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.main-nav a.img-logo img{
+    height: 30px;
+    margin-bottom: 60px;
+}
+
+/* Organizacion del area de trabajo del form */
 
 main {
     display: flex;
@@ -52,12 +53,22 @@ main {
     width: 300px;
 }
 
+/* Diseño del formulario */
+
 main form {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 0;
 }
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Diseño de las entradas de la nueva contraseña */
 
 input#input-pass {
     margin-bottom: 20px;
@@ -67,6 +78,8 @@ input#input-pass {
     border: 0 solid;
     background-color: var(--text-input);
 }
+
+/* Diseño del boton de enviar */
 
 input#submit {
     height: 50px;
@@ -81,13 +94,13 @@ input#submit {
 }
 
 
-
+/* Responsive para pantallas menores a 735px, se desaparece el header y solo queda el logo */
  
 @media (max-width: 735px) {
     .main-nav a.nav-link, div.sign, hr {
         display: none;
     }
-    
+
     section {
         padding: 110px 0 0;
     }
@@ -97,16 +110,28 @@ input#submit {
     }
  
  }
-  
+
+
  @media (max-width: 835px) {
-    header, a.img-logo img {
+    /* Configuracion del area de trabajo para el diseño responsive */
+    * {
+        box-sizing: border-box;
+        padding: 0;
         margin: 0;
     }
-  
+    
     body {
         padding: 0;
+        margin: 0;
     }
-  
+
+    section {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    /* Configuracion del header */
+    
     header {
         display: flex;
         justify-content: space-between;
@@ -114,20 +139,7 @@ input#submit {
         height: 60px;
         margin: 0;
     }
-  
-    .main-nav {
-        display: flex;
-        align-items: center;
-        color: var(--very-light-pink);
-    }
-  
-  
-    a {
-        text-decoration: none;
-        color: var(--very-light-pink);
-        margin: 0 10px;
-    }
-  
+
     .sign {
         display: flex;
         align-items: center;
@@ -141,22 +153,20 @@ input#submit {
         margin: 0;
     }
   
-    * {
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
+    .main-nav {
+        display: flex;
+        align-items: center;
+        color: var(--very-light-pink);
     }
+
+    /* Configuracion de colores del los link del nav */
   
-    section {
-        width: 100vw;
-        height: 100vh;
+    a {
+        text-decoration: none;
+        color: var(--very-light-pink);
+        margin: 0 10px;
     }
-  
-    body {
-        padding: 0;
-        margin: 0;
-    }
-  
+
     main {
         margin: 10% auto;
   
@@ -169,6 +179,7 @@ input#submit {
  }
   
 @media (min-width: 835px) {
+    /* Configuracion del diseño responsive para pantallas mayores a 835px */
     * {
         box-sizing: border-box;
         padding: 0;
@@ -189,6 +200,8 @@ input#submit {
         margin: 10% auto;
   
     }
+
+    /* Configuracion del header, con los links y el logo */
   
     header {
         display: flex;
@@ -203,7 +216,6 @@ input#submit {
         align-items: center;
         color: var(--very-light-pink);
     }
-  
   
     a {
         text-decoration: none;
