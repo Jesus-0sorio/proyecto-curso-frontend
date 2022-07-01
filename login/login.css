@@ -1,0 +1,224 @@
+:root {
+  --very-light-pink: #c7c7c7;
+  --white: #fff;
+  --text-input: #f7f7f7;
+  --black: #000;
+  --dark: #232930;
+  /*(--violet: #ACD9B2; */
+  --violet: #a866ee;
+  --violet-bg: #8446ca;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-bg: 18;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  min-height: 100vh;
+}
+
+/* Logo */
+header,
+hr {
+  display: none;
+}
+
+img.logo-mobile {
+  height: 45px;
+  margin: -80px 0 60px;
+}
+
+/* Diseño de los textos */
+p.forgot {
+  margin: 8px 0;
+}
+
+main a.forgot {
+  color: var(--violet);
+  margin-top: 28px;
+  font-size: var(--font-sm);
+}
+
+main a.forgot:hover {
+  color: var(--black);
+}
+
+label {
+  font-size: var(--font-md);
+}
+
+/* Organizacion del area de trabajo*/
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 100vh;
+  margin: auto;
+}
+
+/* Diseño del formulario */
+
+main form.form-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0;
+}
+
+/* Diseño de inputs */
+
+form input#input-email,
+form input#input-pass {
+  margin: 4px 0 20px;
+  height: 45px;
+  border-radius: 8px;
+  padding: 5px;
+  border: 0 solid;
+  background-color: var(--text-input);
+}
+
+/* Diseño del boton de login */
+
+input#login {
+  height: 50px;
+  border-radius: 8px;
+  border: 0 solid;
+  margin-top: 10px;
+  color: var(--white);
+  background-color: var(--violet);
+  font-size: 16px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+input#login:hover {
+  background: var(--violet-bg);
+}
+
+/* Formularion de sign up */
+form.sign-up {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: inherit;
+  margin: 0 0 60px;
+}
+
+/* Diseño del boton de sign */
+
+.sign-up input {
+  align-self: flex-end;
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid var(--violet);
+  margin: 0;
+  color: var(--violet);
+  background: var(--white);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sign-up input:hover {
+  border: 1px solid var(--black);
+  color: var(--black);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (min-width: 765px) {
+  img.logo-mobile {
+    display: none;
+  }
+
+  form.sign-up {
+    position: relative;
+    height: auto;
+    top: 60px;
+  }
+
+  .sign-up input {
+    align-self: inherit;
+  }
+
+  main {
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  /* Configuracion del header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin: 0;
+  }
+
+  .sign {
+    display: flex;
+    align-items: center;
+  }
+
+  .sign a {
+    color: var(--violet);
+  }
+
+  #logo {
+    margin: 0;
+  }
+
+  .main-nav {
+    display: flex;
+    align-items: center;
+    color: var(--very-light-pink);
+  }
+
+  .main-nav a.nav-link:hover {
+    border-radius: 8px;
+    color: var(--violet);
+    border: 1px solid var(--violet);
+    padding: 6px;
+  }
+
+  .sign a.sign-link:hover {
+    border-radius: 8px;
+    color: var(--very-light-pink);
+    border: 1px solid var(--very-light-pink);
+    padding: 6px;
+  }
+
+  /* Configuracion de colores del los link del nav */
+
+  a {
+    text-decoration: none;
+    color: var(--very-light-pink);
+    margin: 0 10px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    margin: 10% auto 0;
+    /* justify-content: flex-start; */
+  }
+
+  hr {
+    display: block;
+    border: 1px solid var(--very-light-pink);
+  }
+}

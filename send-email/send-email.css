@@ -1,0 +1,286 @@
+/* Declaracion de variables */
+:root {
+    --very-light-pink: #c7c7c7;
+    --white: #fff;
+    --text-input: #f7f7f7;
+    --black: #000;
+    --dark: #232930;
+    /*(--violet: #ACD9B2; */
+    --violet: #a866ee;
+    --violet-bg: #8446ca;
+    --font-sm: 14px;
+    --font-md: 16px;
+    --font-bg: 18;
+  }
+  
+  body {
+    font-family: "Quicksand", sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 110px 0 0;
+  }
+  
+  /* Diseño de los textos */
+  
+  h2 {
+    font-size: var(--font-bg);
+    margin: 0;
+  }
+  
+  p {
+    font-size: var(--font-md);
+    font-weight: normal;
+    margin: 8px 0 10px;
+    color: var(--very-light-pink);
+    text-align: center;
+  }
+
+  p.receive {
+    font-size: var(--font-sm);
+    font-weight: normal;
+    margin: 8xp 0;
+    color: var(--black);
+  }
+
+  a.resend {
+    color: var(--violet);
+    margin: 0 5px;
+  }
+
+  a.resend:hover {
+    color: var(--black);
+  }
+  
+  /* Diseño del header */
+  
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-nav a.img-logo img {
+    height: 30px;
+    margin-bottom: 60px;
+  }
+  
+  /* Diseño logo email */
+  a.logo-email img {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  a.logo-email {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    background: var(--text-input);
+    border-radius: 50%;
+    justify-content: center;
+  }
+
+  /* Organizacion del area de trabajo*/
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+  }
+  
+  /* Diseño del formulario */
+  
+  main form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  /* Diseño del boton de enviar */
+  
+  input#submit {
+    height: 50px;
+    border-radius: 8px;
+    border: 0 solid;
+    margin-top: 10px;
+    color: var(--white);
+    background-color: var(--violet);
+    font-size: 16px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  input#submit:hover {
+      background: var(--violet-bg);
+  }
+  
+  a {
+      cursor: pointer;
+  }
+  
+  /* Responsive para pantallas menores a 735px, se desaparece el header y solo queda el logo */
+  
+  @media (max-width: 735px) {
+    .main-nav a.nav-link,
+    div.sign,
+    hr {
+      display: none;
+    }
+  
+    section {
+      padding: 110px 0 0;
+    }
+  
+    header.head {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 835px) {
+    /* Configuracion del area de trabajo para el diseño responsive */
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+  
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  
+    section {
+      width: 100vw;
+      height: 100vh;
+    }
+  
+    /* Configuracion del header */
+  
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+      margin: 0;
+    }
+  
+    .sign {
+      display: flex;
+      align-items: center;
+    }
+  
+    .sign a {
+      color: var(--violet);
+    }
+  
+    #logo {
+      margin: 0;
+    }
+  
+    .main-nav {
+      display: flex;
+      align-items: center;
+      color: var(--very-light-pink);
+    }
+  
+    /* Configuracion de colores del los link del nav */
+  
+    a {
+      text-decoration: none;
+      color: var(--very-light-pink);
+      margin: 0 10px;
+    }
+  
+    main {
+      margin: 10% auto;
+    }
+  
+    hr {
+      border: 1px solid var(--text-input);
+    }
+  }
+  
+  @media (min-width: 835px) {
+    /* Configuracion del diseño responsive para pantallas mayores a 835px */
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+  
+    section {
+      width: 100vw;
+      height: 100vh;
+    }
+  
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  
+    main {
+      margin: 10% auto;
+    }
+  
+    /* Configuracion del header, con los links y el logo */
+  
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+      margin: 0 50px;
+    }
+  
+    .main-nav {
+      display: flex;
+      align-items: center;
+      color: var(--very-light-pink);
+    }
+  
+    a {
+      text-decoration: none;
+      color: var(--very-light-pink);
+      margin: 0 10px;
+    }
+  
+    .sign {
+      display: flex;
+      align-items: center;
+    }
+  
+    .sign a {
+      color: var(--violet);
+    }
+  
+    a.img-logo img {
+      margin: 0 35px 0 0;
+      justify-content: center;
+    }
+  
+    #logo {
+      margin: 0;
+    }
+  
+    .main-nav a.nav-link:hover {
+      border-radius: 8px;
+      color: var(--violet);
+      border: 1px solid var(--violet);
+      padding: 6px;
+    }
+  
+    .sign a.sign-link:hover {
+      border-radius: 8px;
+      color: var(--very-light-pink);
+      border: 1px solid var(--very-light-pink);
+      padding: 6px;
+    }
+  
+    hr {
+      border: 1px solid var(--text-input);
+    }
+  }
+  
